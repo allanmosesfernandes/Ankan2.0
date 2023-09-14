@@ -27,7 +27,7 @@ function VisualMusings() {
 				Visual <span className="text-primary">musings</span>
 			</h2>
 			<p className="text-white text-lg">What's been inspiring me lately?</p>
-			<div className="grid grid-cols-3 gap-3 my-5">
+			<div className="image__grid__container">
 				{images.map((image, index) => {
 					// Destructure what we need from image object
 					const { sourceUrl, id } = image.featuredImage.node;

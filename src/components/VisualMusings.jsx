@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { TEMP_IMAGES_WEEKLY_INSPIRATION } from "../utils/constant";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 function VisualMusings() {
 	// Using static query fetch images
 	const data = useStaticQuery(graphql`
-		query VisualMusingsQuery {
-			allWpWeeklyInspiration {
+		query MyQuery {
+			allWpWeeklyInspiration(limit: 5) {
 				nodes {
+					id
 					featuredImage {
 						node {
-							sourceUrl
-							id
+							gatsbyImage(height: 800)
 						}
 					}
 				}
@@ -20,7 +20,7 @@ function VisualMusings() {
 	`);
 	// set all images from query in this variable
 	const images = data.allWpWeeklyInspiration.nodes;
-
+	// console.log(images);
 	return (
 		<div className="flex flex-col md:p-5 p-3 w-full bg-[#333333] gap-6">
 			<h2 className="lg:text-6xl text-3xl font-medium lg:mt-14 mt-10 leading-8 text-white">
@@ -30,7 +30,8 @@ function VisualMusings() {
 			<div className="image__grid__container">
 				{images.map((image, index) => {
 					// Destructure what we need from image object
-					const { sourceUrl, id } = image.featuredImage.node;
+					const { id } = image.featuredImage.node;
+					const { gatsbyImage } = image.featuredImage.node;
 					// Gymnastics to set the image class
 					const group = index % 5;
 					// Set CSS classes for each group
@@ -39,11 +40,7 @@ function VisualMusings() {
 
 					return (
 						<div key={id} className={`${highlightImage} ${smallest}`}>
-							<img
-								className="h-full object-cover"
-								src={sourceUrl}
-								alt={`Weekly Inspiration ${index}`}
-							/>
+							<GatsbyImage image={gatsbyImage} alt={id} className="h-full" />
 						</div>
 					);
 				})}

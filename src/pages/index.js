@@ -3,6 +3,7 @@ import React from "react";
 import Header from "../components/Header";
 import FirstFold from "../components/FirstFold";
 import WhatAnkanDoes from "../components/WhatAnkanDoes";
+import Brands from "../components/Brands";
 
 function IndexPage() {
 	return (
@@ -10,6 +11,7 @@ function IndexPage() {
 			<Header />
 			<FirstFold />
 			<WhatAnkanDoes />
+			<Brands />
 		</>
 	);
 }

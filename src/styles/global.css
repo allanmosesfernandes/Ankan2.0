@@ -15,4 +15,28 @@
         font-family: 'Inter Variable', sans-serif;
         background-color: #E8E8EA;
     }
+.hover-3 {
+  display: inline-flex;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  position: relative; /* Add this to position the :before element relative to this container */
+}
+
+.hover-3:before {
+  content: ""; /* Add this to make the :before element appear */
+  position: absolute; /* Add this to position the :before element */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #492059;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease; /* Add this for smooth transition */
+}
+
+.hover-3:hover:before {
+  transform: translateX(0);
+}
+
 }

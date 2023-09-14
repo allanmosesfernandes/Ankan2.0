@@ -1,6 +1,13 @@
 ## Todo List
-
-- [ ] Convert Header
+---
+  - [x] Convert Header
+  - [ ] What I do  
+  - [ ] Brands marquee
   - [ ] Make mobile menu
-- [ ] Task 2
-- [x] Completed Task
+
+  - [ ] Blocks
+  - [ ] Image Grid
+  - [ ] Footer
+  - [ ] Animations
+  - [ ] 
+

@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import FirstFold from "../components/FirstFold";
 import WhatAnkanDoes from "../components/WhatAnkanDoes";
 import Brands from "../components/Brands";
+import VisualMusings from "../components/VisualMusings";
 
 function IndexPage() {
 	return (
@@ -12,6 +13,7 @@ function IndexPage() {
 			<FirstFold />
 			<WhatAnkanDoes />
 			<Brands />
+			<VisualMusings />
 		</>
 	);
 }

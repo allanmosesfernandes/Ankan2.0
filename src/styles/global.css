@@ -41,4 +41,18 @@
 	.brand__box {
 		@apply justify-center flex flex-col p-6 w-[150px] h-[150px] border-black border-2 border-r-0 items-center;
 	}
+
+	.highlight {
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 2;
+	}
+
+	.smally {
+		margin-right: auto;
+	}
+	.secondary.smally {
+		img {
+			object-fit: contain;
+		}
+	}
 }

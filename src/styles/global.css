@@ -72,6 +72,15 @@
 		margin: 3rem 0;
 	}
 
+	.wp-content-img .wp-block-image {
+		margin: 2rem auto;
+		max-width: 800px;
+		border-radius: 10px;
+	}
+	/* .wp-content-img .wp-block-image {
+		display: flex;
+		margin: 2rem auto;
+	} */
 	@media only screen and (max-width: 600px) {
 		.image__grid__container {
 			grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));

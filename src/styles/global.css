@@ -11,6 +11,13 @@
 		src: url("../assets/fonts/gothic.ttf") format("truetype");
 	}
 
+	@font-face {
+		font-family: "seasons";
+		font-style: normal;
+		font-weight: 400;
+		src: url("../assets/fonts/seasons-tilt.otf") format("opentype");
+	}
+
 	body {
 		font-family: "Inter Variable", sans-serif;
 		background-color: #e8e8ea;

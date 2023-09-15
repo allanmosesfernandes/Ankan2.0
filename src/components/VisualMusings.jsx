@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -20,17 +20,16 @@ function VisualMusings() {
 	`);
 	// set all images from query in this variable
 	const images = data.allWpWeeklyInspiration.nodes;
-	// console.log(images);
 	return (
 		<div className="flex flex-col md:p-5 p-3 w-full bg-[#333333] gap-6">
 			<h2 className="lg:text-6xl text-3xl font-medium lg:mt-14 mt-10 leading-8 text-white">
-				Visual <span className="text-primary">musings</span>
+				Visual <span className="text-primary font-seasons">musings</span>
 			</h2>
 			<p className="text-white text-lg">What's been inspiring me lately?</p>
 			<div className="image__grid__container">
 				{images.map((image, index) => {
 					// Destructure what we need from image object
-					const { id } = image.featuredImage.node;
+
 					const { gatsbyImage } = image.featuredImage.node;
 					// Gymnastics to set the image class
 					const group = index % 5;
@@ -39,8 +38,8 @@ function VisualMusings() {
 					const smallest = group === 4 ? "smally" : "";
 
 					return (
-						<div key={id} className={`${highlightImage} ${smallest}`}>
-							<GatsbyImage image={gatsbyImage} alt={id} className="h-full" />
+						<div key={image.id} className={`${highlightImage} ${smallest}`}>
+							<GatsbyImage image={gatsbyImage} className="h-full" alt="" />
 						</div>
 					);
 				})}

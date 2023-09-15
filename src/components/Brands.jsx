@@ -22,7 +22,9 @@ function Brands() {
 	return (
 		<div className="flex flex-col md:p-5 p-3 w-full">
 			<h2 className="lg:text-6xl text-3xl font-medium lg:my-14 my-10 leading-8">
-				Brands I've <span className="text-primary">worked</span> with
+				Brands I've{" "}
+				<span className="text-primary font-seasons font-medium">worked</span>{" "}
+				with
 			</h2>
 			<Marquee gradient="false" speed="30" gradientWidth="0" className="mb-12">
 				{brands.map((brand) => (

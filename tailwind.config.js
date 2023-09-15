@@ -11,6 +11,10 @@ module.exports = {
 			},
 			fontFamily: {
 				gothic: ["gothic", "sans-serif"],
+				seasons: ["seasons", "sans-serif"],
+			},
+			animation: {
+				"spin-slow": "spin 20s linear infinite",
 			},
 		},
 	},

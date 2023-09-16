@@ -15,11 +15,6 @@ function BlogArticle({ pageContext, data }) {
 				<h2 className="lg:text-4xl text-3xl font-medium lg:mt-14 mt-10 leading-8 text-center">
 					{title}
 				</h2>
-				<GatsbyImage
-					image={gatsbyImage}
-					className="h-[450px] object-top w-full"
-					alt=""
-				/>
 				<p className="flex items-center mr-auto my-4 italic font-medium">
 					{" "}
 					<hr className="bg-primary w-[20px] mr-4 border-primary" />

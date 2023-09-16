@@ -1,36 +1,11 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Star from "../images/star.png";
 
-function Insights() {
-	// const posts = useStaticQuery(graphql`
-	// 	query MyQuery {
-	// 		allWpPost(limit: 3, sort: { date: DESC }) {
-	// 			nodes {
-	// 				id
-	// 				slug
-	// 				title
-	// 				date(formatString: "MMMM DD, YYYY")
-	// 				categories {
-	// 					nodes {
-	// 						name
-	// 					}
-	// 				}
-	// 				featuredImage {
-	// 					node {
-	// 						gatsbyImage(
-	// 							height: 800
-	// 							placeholder: DOMINANT_COLOR
-	// 							formats: WEBP
-	// 						)
-	// 					}
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// `);
-	// const postsArray = posts.allWpPost.nodes;
+function Insights({ posts }) {
+	const postsArray = posts.nodes;
 	return (
 		<div className="flex flex-col bg-black text-white items-center md:px-5 px-3 w-full py-6">
 			<div className="flex flex-col md:gap-4 gap-2 lg:text-6xl text-3xl font-medium text-center">
@@ -49,8 +24,8 @@ function Insights() {
 					for <span className="font-seasons">you</span>
 				</p>
 			</div>
-			<div className="grid grid-cols-3 gap-10 mt-10">
-				{/* {postsArray.map((post) => {
+			<div className="grid grid-cols-3 gap-10 mt-10 container">
+				{postsArray.map((post) => {
 					const { id, slug, title, featuredImage, date } = post;
 					// Get category name
 					const image = getImage(featuredImage.node.gatsbyImage);
@@ -70,7 +45,7 @@ function Insights() {
 							</div>
 						</Link>
 					);
-				})} */}
+				})}
 			</div>
 		</div>
 	);

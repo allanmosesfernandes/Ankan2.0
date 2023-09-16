@@ -37,6 +37,16 @@ function Brands() {
 						/>
 					</div>
 				))}
+				{brands.map((brand, index) => (
+					<div key={index} className="brand__box">
+						<img
+							src={brand.src}
+							alt={brand.alt}
+							title={brand.title}
+							className="grayscale"
+						/>
+					</div>
+				))}
 			</Marquee>
 		</div>
 	);

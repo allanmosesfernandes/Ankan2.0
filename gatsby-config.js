@@ -3,8 +3,10 @@
  */
 module.exports = {
 	siteMetadata: {
-		title: "AnkanSSR",
-		siteUrl: "https://www.yourdomain.tld",
+		title: "Ankan Chittalipi - Fashion Merchandiser and Buyer",
+		siteUrl: "https://ankanchittalipi.com/",
+		description:
+			"Keep yourself updated on the Whats, Where & Whys in Fashion, Culture & Lifestyle with Ankan Chittalipi, a Fashion Merchandiser and Buyer.",
 	},
 	plugins: [
 		{
@@ -19,6 +21,7 @@ module.exports = {
 				typeName: "Json", // a fixed string
 			},
 		},
+		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-image",
 		"gatsby-plugin-sharp",
 		"gatsby-transformer-sharp",

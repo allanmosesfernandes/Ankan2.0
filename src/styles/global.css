@@ -77,10 +77,15 @@
 		max-width: 800px;
 		border-radius: 10px;
 	}
-	/* .wp-content-img .wp-block-image {
+	.wp-content-img mark {
+		background-color: #ff5757 !important;
+		color: white;
+		padding: 3px;
+	}
+	.wp-content-img .wp-block-image {
 		display: flex;
-		margin: 2rem auto;
-	} */
+		margin: 1rem auto;
+	}
 
 	/* Block Quotes */
 	.wp-content-img .wp-block-quote {
@@ -93,14 +98,14 @@
 		margin: 10px 0;
 		padding-left: 20px;
 	}
-.wp-content-img ul {
-  list-style: disc;
-  margin-left: 20px;
-}
+	.wp-content-img ul {
+		list-style: disc;
+		margin-left: 20px;
+	}
 
-.wp-content-img li {
-  margin-bottom: 10px;
-}
+	.wp-content-img li {
+		margin-bottom: 10px;
+	}
 	@media only screen and (max-width: 600px) {
 		.image__grid__container {
 			grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));

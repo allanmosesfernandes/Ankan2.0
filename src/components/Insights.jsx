@@ -7,7 +7,7 @@ import Star from "../images/star.png";
 function Insights({ posts }) {
 	const postsArray = posts.nodes;
 	return (
-		<div className="flex flex-col bg-black text-white items-center md:px-5 px-3 w-full py-6">
+		<div className="flex flex-col bg-black text-white items-center md:px-5 px-3 w-full py-20">
 			<div className="flex flex-col md:gap-4 gap-2 lg:text-6xl text-3xl font-medium text-center">
 				<h4 className="relative flex items-center justify-center gap-4">
 					I've got
@@ -24,7 +24,7 @@ function Insights({ posts }) {
 					for <span className="font-seasons">you</span>
 				</p>
 			</div>
-			<div className="grid grid-cols-3 gap-10 mt-10 container">
+			<div className="grid grid-cols-3 gap-10 my-20 container">
 				{postsArray.map((post) => {
 					const { id, slug, title, featuredImage, date } = post;
 					// Get category name

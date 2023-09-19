@@ -7,6 +7,7 @@ import WhatAnkanDoes from "../components/WhatAnkanDoes";
 import Brands from "../components/Brands";
 import VisualMusings from "../components/VisualMusings";
 import Insights from "../components/Insights";
+import PlayListTakeOver from "../components/PlaylistTakeOver";
 
 function IndexPage({ data }) {
 	// Destructure data
@@ -20,6 +21,7 @@ function IndexPage({ data }) {
 			<Brands />
 			<VisualMusings weeklyInspiration={weeklyInspiration} />
 			<Insights posts={posts} />
+			<PlayListTakeOver />
 		</>
 	);
 }

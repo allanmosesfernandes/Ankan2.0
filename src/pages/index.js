@@ -8,6 +8,7 @@ import Brands from "../components/Brands";
 import VisualMusings from "../components/VisualMusings";
 import Insights from "../components/Insights";
 import PlayListTakeOver from "../components/PlaylistTakeOver";
+import Footer from "../components/Footer";
 
 function IndexPage({ data }) {
 	// Destructure data
@@ -22,6 +23,7 @@ function IndexPage({ data }) {
 			<VisualMusings weeklyInspiration={weeklyInspiration} />
 			<Insights posts={posts} />
 			<PlayListTakeOver />
+			<Footer />
 		</>
 	);
 }

@@ -3,6 +3,7 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Star from "../images/star.png";
+import LearnMore from "./Buttons/LearnMore";
 
 function Insights({ posts }) {
 	const postsArray = posts.nodes;
@@ -24,7 +25,7 @@ function Insights({ posts }) {
 					for <span className="font-seasons">you</span>
 				</p>
 			</div>
-			<div className="grid grid-cols-3 gap-10 my-20 container">
+			<div className="grid md:grid-cols-3 grid-cols-1 md:p-0 p-2 gap-10 my-20 container">
 				{postsArray.map((post) => {
 					const { id, slug, title, featuredImage, date } = post;
 					// Get category name
@@ -47,6 +48,7 @@ function Insights({ posts }) {
 					);
 				})}
 			</div>
+			<LearnMore color="black" link="/blog" text="Read More" />
 		</div>
 	);
 }

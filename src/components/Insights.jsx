@@ -27,8 +27,9 @@ function Insights({ posts }) {
 			</div>
 			<div className="grid md:grid-cols-3 grid-cols-1 md:p-0 p-2 gap-10 my-20 container">
 				{postsArray.map((post) => {
-					const { id, slug, title, featuredImage, date } = post;
+					const { id, slug, title, featuredImage, date, categories } = post;
 					// Get category name
+					const category = categories.nodes[0].name;
 					const image = getImage(featuredImage.node.gatsbyImage);
 					return (
 						<Link to={`blog/${slug}`}>
@@ -39,9 +40,11 @@ function Insights({ posts }) {
 									className="h-[250px] object-center object-cover grayscale hover:grayscale-0 ease-in-out duration-300"
 								/>
 								<h4 className="text-lg">{title}</h4>
-								<div className="flex items-center mt-auto italic text-sm">
+								<div className="flex items-center mt-auto italic text-base">
 									<hr className="bg-primary w-[20px] mr-4 border-primary" />
 									{date}
+
+									<p className="ml-auto border-primary border-2 p-2">{category}</p>
 								</div>
 							</div>
 						</Link>

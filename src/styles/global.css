@@ -4,6 +4,9 @@
 
 /* Layout */
 @layer components {
+html, body {
+	scroll-behavior: smooth;
+}
 	@font-face {
 		font-family: "gothic";
 		font-style: normal;

@@ -14,7 +14,7 @@ function BlogArticle({ pageContext, data }) {
 	return (
 		<div className="max-w-screen-lg mx-auto">
 			<SEO title={title} description={excerpt} imageURL={featurtedImageURL} />
-			<div className="flex flex-col items-center w-full md:px-5 px-3 ">
+			<div className="flex flex-col items-center w-full md:px-5 px-3">
 				<h2 className="lg:text-4xl text-3xl font-medium lg:mt-14 mt-10 leading-8 text-center">
 					{title}
 				</h2>

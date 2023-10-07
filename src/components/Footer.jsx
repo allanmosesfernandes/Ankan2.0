@@ -1,13 +1,33 @@
 import React from "react";
 import { Link } from "gatsby";
 import { BiLogoLinkedin, BiLogoGmail } from "react-icons/bi";
+import { FaAnglesUp } from "react-icons/fa";
 import { AiOutlineInstagram } from "react-icons/ai";
 import WhiteArrow from "../images/white-arrow.svg";
 import AMF from "../images/AMF.png";
+import Top from "../images/top.svg";
 
 function Footer() {
+	const goToTopHandler = () => {
+		window.scrollTo(0, 0);
+	};
+
 	return (
-		<footer className="bg-black text-white text-center py-10 flex flex-col justify-center items-center">
+		<footer className="bg-black text-white text-center py-10 flex flex-col justify-center items-center relative">
+			{/* BUtton to go top */}
+			<div
+				role="button"
+				tabIndex="0"
+				onClick={goToTopHandler}
+				onKeyDown={(event) => {
+					if (event.key === "Enter") {
+						goToTopHandler();
+					}
+				}}
+				className="flex justify-center p-4 mr-auto border-primary rounded-full border-2 absolute top-0 left-0 mt-10 ml-4 lg:ml-10 hover:bg-primary hover:text-black transition duration-300 ease-in-out w-[50px] h-[50px]"
+			>
+				<img src={Top} alt="Top" className="cursor-pointer " />
+			</div>
 			<p className="lg:text-9xl text-6xl">
 				Say <span className="font-seasons text-primary">hello</span>
 			</p>

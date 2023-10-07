@@ -1,8 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import React from "react";
+/* eslint-disable react/jsx-filename-extension */
 import Layout from "./src/components/layout";
-import "./src/styles/global.css";
-import "@fontsource-variable/inter";
 
 export function wrapPageElement({ element, props }) {
 	// eslint-disable-next-line react/jsx-props-no-spreading

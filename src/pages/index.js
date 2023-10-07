@@ -16,14 +16,12 @@ function IndexPage({ data }) {
 
 	return (
 		<>
-			<Header />
 			<FirstFold />
 			<WhatAnkanDoes />
 			<Brands />
 			<VisualMusings weeklyInspiration={weeklyInspiration} />
 			<Insights posts={posts} />
 			<PlayListTakeOver />
-			<Footer />
 		</>
 	);
 }

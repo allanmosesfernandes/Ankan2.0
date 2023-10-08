@@ -4,7 +4,8 @@ import Thread from "../images/thread.svg";
 
 function FirstFold() {
 	return (
-		<div className="flex md:flex-row flex-col-reverse md:p-5 p-3 ">
+		
+		<div className="flex md:flex-row flex-col-reverse md:p-6 p-3 ">
 			{/* Left */}
 			<div className="md:w-7/12 w-full flex flex-col justify-center gap-8">
 				<p className="font-gothic lg:text-8xl text-4xl hidden md:block">

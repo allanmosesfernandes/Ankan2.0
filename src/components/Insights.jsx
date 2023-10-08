@@ -25,7 +25,7 @@ function Insights({ posts }) {
 					for <span className="font-seasons">you</span>
 				</p>
 			</div>
-			<div className="grid md:grid-cols-3 grid-cols-1 md:p-0 p-2 gap-10 my-20 container">
+			<div className="grid lg:grid-cols-3 grid-cols-1 md:p-0 p-2 gap-10 my-20 container">
 				{postsArray.map((post) => {
 					const { id, slug, title, featuredImage, date, categories } = post;
 					// Get category name

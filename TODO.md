@@ -1,8 +1,8 @@
 ## Todo List
 ---
   - [x] Convert Header
-  - [ ] What I do  
-  - [ ] Brands marquee
+  - [x] What I do  
+  - [x] Brands marquee
   - [ ] Make mobile menu
 
   - [ ] Blocks

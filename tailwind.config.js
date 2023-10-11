@@ -9,6 +9,8 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: "#ff5757",
+				secondary: "#333333",
+				tertiary: "#e95166",
 			},
 			fontFamily: {
 				gothic: ["gothic", "sans-serif"],

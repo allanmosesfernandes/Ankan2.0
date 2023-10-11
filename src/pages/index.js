@@ -16,7 +16,6 @@ function IndexPage({ data }) {
 
 	return (
 		<>
-			<Header />
 			<FirstFold />
 			<WhatAnkanDoes />
 			<Brands />

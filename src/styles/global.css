@@ -382,3 +382,7 @@
 	left: 50%;
 	transform: translateX(-50%);
   }
+
+  .custom-grid {
+    grid-template-columns: 1fr 2fr 2fr;
+  }

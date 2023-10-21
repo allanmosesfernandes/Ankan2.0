@@ -11,6 +11,7 @@ module.exports = {
 				primary: "#ff5757",
 				secondary: "#333333",
 				tertiary: "#e95166",
+				gray: "#d6d6d6",
 			},
 			fontFamily: {
 				gothic: ["gothic", "sans-serif"],

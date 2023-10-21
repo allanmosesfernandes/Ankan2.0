@@ -11,11 +11,11 @@ function BlogArticle({ pageContext, data }) {
 	const { title, content, featuredImage, date, excerpt } = blogData[0];
 	const featurtedImageURL = featuredImage.node.mediaItemUrl;
 	const { gatsbyImage } = featuredImage.node;
-	const  articleURL = window.location.href;
+	const articleURL = window.location.href;
 	return (
 		<>
-			<div className="fullBleed bg-tertiary text-white p-6 lg:h-[500px] h-[450px] flex justify-center items-center">
-				<h2 className="lg:text-6xl text-3xl font-medium  leading-8 text-center md:w-8/12 w-10/12">
+			<div className="fullBleed bg-tertiary text-white md:p-6 p-0 md:h-[500px] h-[400px] flex justify-center items-center md:mb-16 mb-8">
+				<h2 className="lg:text-6xl text-3xl font-medium  leading-normal text-center md:w-8/12 w-10/12">
 					{title}
 				</h2>
 			</div>

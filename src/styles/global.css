@@ -288,7 +288,9 @@
 .skills__details p span {
     font-weight: bold;
 }
-
+.custom-shadow {
+	box-shadow:  rgba(0, 0, 0, 0.05) 0px 0px 4px, rgba(0, 0, 0, 0.15) 0px 2px 8px;;
+}
 .floater {
     animation-name: float;
     animation-duration: 3s;

@@ -24,7 +24,7 @@ function WhatAnkanDoes() {
 							className="md:w-[100px] w-[50px]"
 						/>{" "}
 					</div>
-					<LearnMore color="black" link="/" text="Learn More" />
+					<LearnMore color="black" link="about" text="Learn More" />
 				</div>
 
 				{/* Card 02 */}
@@ -39,7 +39,7 @@ function WhatAnkanDoes() {
 							className="md:w-[100px] w-[50px]"
 						/>
 					</div>
-					<LearnMore color="white" link="/" text="Discover Trends" />
+					<LearnMore color="white" link="blog" text="Discover Trends" />
 				</div>
 			</div>
 		</div>

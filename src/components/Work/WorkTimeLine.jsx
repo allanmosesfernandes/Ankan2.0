@@ -24,7 +24,7 @@ function WorkTimeLine() {
 				>
 					<h5 className="vertical-timeline-element-title">London, UK </h5>
 					<h3 className="vertical-timeline-element-subtitle"> Buyer </h3>
-					<p>Smythson of Bond Street</p>
+					<p className="text-md">Smythson of Bond Street</p>
 				</VerticalTimelineElement>
 
 				<VerticalTimelineElement

@@ -62,7 +62,7 @@ function About() {
 							<img
 								src={Evolving}
 								alt="Empathy icon"
-								className="w-8/12 mx-auto"
+								className="w-[100px] h-[150px] mx-auto"
 							/>
 							<h2 className="text-2xl">Continuously evolving</h2>
 						</div>
@@ -83,7 +83,7 @@ function About() {
 							<img
 								src={Empathy}
 								alt="Empathy icon"
-								className="w-8/12 mx-auto"
+								className="w-[100px] h-[150px] mx-auto"
 							/>
 							<h2 className="text-2xl">Driven by empathy</h2>
 						</div>
@@ -105,7 +105,7 @@ function About() {
 							<img
 								src={Getter}
 								alt="Empathy icon"
-								className="w-[50%] mx-auto"
+								className="md:w-[100px] w-[70px] h-[150px] mx-auto"
 							/>
 							<h2 className="text-2xl">High-octane go-getter</h2>
 						</div>

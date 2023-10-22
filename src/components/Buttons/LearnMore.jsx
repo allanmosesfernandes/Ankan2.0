@@ -6,7 +6,7 @@ function LearnMore({ color, link, text }) {
 		<Link to={`${link}`}>
 			<button
 				type="button"
-				className={`bg-transparent md:w-[250px] w-[150px] py-2 px-4 rounded uppercase tracking-wider font-medium md:text-lg text-sm ease-in-out duration-200 ${
+				className={`bg-transparent md:w-[250px] w-[190px] md:py-2 px-4 py-4 rounded uppercase tracking-wider font-medium md:text-lg text-sm ease-in-out duration-200 ${
 					color === "black"
 						? "text-white border border-white hover:text-black hover:border-black hover:bg-white"
 						: "text-black border border-black hover:text-white hover:border-white hover:bg-black"

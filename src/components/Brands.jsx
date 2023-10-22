@@ -32,7 +32,7 @@ function Brands() {
 				gradient="false"
 				speed="30"
 				gradientWidth="0"
-				className="mb-12 -mt-12"
+				className="mb-12 md:-mt-12"
 			>
 				{brands.map((brand) => (
 					<div key={brand.title} className="brand__box">

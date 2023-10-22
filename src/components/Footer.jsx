@@ -82,7 +82,7 @@ function Footer() {
 			{/* T&C */}
 			<div className="flex flex-col items-center justify-center mt-6">
 				<p className="text-sm">Created with ❤️ & ☕ by </p>
-				<Link to="https://allanfernandes.dev/">
+				<Link to="https://allanfernandes.dev/" target="_blank">
 					<img
 						src={AF}
 						alt="allan fernandes logo"

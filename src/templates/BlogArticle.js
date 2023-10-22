@@ -1,21 +1,31 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { MdOutlineArrowBack } from "react-icons/md";
 import SEO from "../components/SEO";
 import SocialShare from "../components/SocialShare/SocialShare";
+import InsightsCopy from "../components/InsightsCopy";
 
 function BlogArticle({ pageContext, data, location }) {
-	const { id } = pageContext;
+	const { id, articleCategory } = pageContext;
 	const blogData = data.allWpPost.nodes;
-	const { title, content, featuredImage, date, excerpt } = blogData[0];
+	const { posts } = data;
+	const postsArray = posts.edges;
+	console.log(postsArray);
+	console.log(posts.edges);
+	const { title, content, featuredImage, date, excerpt, categories } =
+		blogData[0];
 	const featurtedImageURL = featuredImage.node.mediaItemUrl;
 	const { gatsbyImage } = featuredImage.node;
 	const articleURL = location.href;
 	return (
 		<>
-			<div className="fullBleed bg-tertiary text-white md:p-6 p-0 md:h-[500px] h-[400px] flex justify-center items-center md:mb-16 mb-8">
-				<h2 className="lg:text-6xl text-3xl font-medium  leading-normal text-center md:w-8/12 w-10/12">
+			<div className="fullBleed relative text-white md:p-6 p-0 md:h-[500px] h-[400px] flex justify-center items-center md:mb-16 mb-8">
+				<Link to="/blog" className="absolute left-5 top-5">
+					<MdOutlineArrowBack size={30} />
+				</Link>
+				<h2 className="lg:text-6xl text-3xl font-medium  leading-normal text-center md:w-8/12 w-12/12 md:mt-0 -mt-[2rem]">
 					{title}
 				</h2>
 			</div>
@@ -28,7 +38,11 @@ function BlogArticle({ pageContext, data, location }) {
 							<hr className="bg-primary w-[20px] mr-4 border-primary" />
 							{date}
 						</p>
-						<SocialShare shareURL={articleURL} />
+						<SocialShare
+							shareURL={articleURL}
+							title={title}
+							featuredImage={featurtedImageURL}
+						/>
 					</div>
 					<div
 						dangerouslySetInnerHTML={{ __html: content }}
@@ -36,13 +50,14 @@ function BlogArticle({ pageContext, data, location }) {
 					/>
 				</div>
 			</div>
+			<InsightsCopy posts={postsArray} category={articleCategory} />
 		</>
 	);
 }
-
+/* G9zdDo5Ng== */
 export default BlogArticle;
-export const query = graphql`
-	query MyQuery($id: String!) {
+export const combinedQuery = graphql`
+	query CombinedQuery($id: String!, $articleCategory: String!) {
 		allWpPost(filter: { id: { eq: $id } }) {
 			nodes {
 				date(formatString: "MMMM DD, YYYY")
@@ -60,6 +75,42 @@ export const query = graphql`
 				title
 				content
 				excerpt
+				categories {
+					nodes {
+						name
+					}
+				}
+			}
+		}
+
+		posts: allWpPost(
+			limit: 3
+			filter: {
+				id: { ne: $id }
+				categories: { nodes: { elemMatch: { name: { eq: $articleCategory } } } }
+			}
+		) {
+			edges {
+				node {
+					id
+					slug
+					title
+					date(formatString: "MMMM DD, YYYY")
+					categories {
+						nodes {
+							name
+						}
+					}
+					featuredImage {
+						node {
+							gatsbyImage(
+								height: 800
+								placeholder: DOMINANT_COLOR
+								formats: WEBP
+							)
+						}
+					}
+				}
 			}
 		}
 	}

@@ -5,10 +5,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Star from "../images/star.png";
 import LearnMore from "./Buttons/LearnMore";
 
-function Insights({ posts }) {
-	const POSTS_ARRAY = posts.nodes;
+function InsightsCopy({ posts, category }) {
 	return (
-		<div className="flex flex-col bg-black text-white items-center md:px-5 px-3 w-full py-20">
+		<div className="flex flex-col bg-black text-white items-center md:px-5 px-3 w-full lg:py-20 py-10">
 			<div className="flex flex-col md:gap-4 gap-2 lg:text-6xl text-3xl font-medium text-center">
 				<h4 className="relative flex items-center justify-center gap-4">
 					I've got
@@ -20,14 +19,17 @@ function Insights({ posts }) {
 						/>{" "}
 					</span>
 				</h4>
-				<p className=" text-primary font-seasons">exciting insight</p>
+				<p className=" text-primary font-seasons">
+					exciting {category} insight
+				</p>
 				<p className="">
 					for <span className="font-seasons">you</span>
 				</p>
 			</div>
 			<div className="grid lg:grid-cols-3 grid-cols-1 md:p-0 p-2 gap-10 my-20 container">
-				{POSTS_ARRAY.map((post) => {
-					const { id, slug, title, featuredImage, date, categories } = post;
+				{posts.map((post) => {
+					const { id, slug, title, featuredImage, date, categories } =
+						post.node;
 					// Get category name
 					const category = categories.nodes[0].name;
 					const image = getImage(featuredImage.node.gatsbyImage);
@@ -53,9 +55,9 @@ function Insights({ posts }) {
 					);
 				})}
 			</div>
-			<LearnMore color="black" link="/blog" text="Read More" />
+			{/* <LearnMore color="black" link="/blog" text="Read More" /> */}
 		</div>
 	);
 }
 
-export default Insights;
+export default InsightsCopy;

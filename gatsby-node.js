@@ -13,6 +13,11 @@ async function turnPostsIntoPages({ graphql, actions }) {
 					id
 					slug
 					uri
+					categories {
+						nodes {
+							name
+						}
+					}
 				}
 			}
 		}
@@ -21,12 +26,14 @@ async function turnPostsIntoPages({ graphql, actions }) {
 	// Creating Individual Blog Pages
 	// 3. Loop over each post and create a page for that post
 	data.allWpPost.nodes.forEach((post) => {
+		const articleCategory = post.categories.nodes[0]?.name || "";  // Get the first category name or default to an empty string
 		actions.createPage({
 			// What is the URL for this new page??
 			path: `blog/${post.slug}`,
 			component: blogTemplate,
 			context: {
 				id: post.id,
+				articleCategory,
 			},
 		});
 	});

@@ -9,7 +9,7 @@ import {
 	WhatsappShareButton,
 } from "react-share";
 
-function SocialShare({ shareURL }) {
+function SocialShare({ shareURL, title }) {
 	const [isOpen, setIsOpen] = useState(false);
 	const modalRef = useRef(null);
 	useEffect(() => {
@@ -45,15 +45,15 @@ function SocialShare({ shareURL }) {
 		if (navigator.share && isMobile) {
 			try {
 				await navigator.share({
-					title: "Check out this link!",
-					text: "Here is a cool link I found:",
+					title: { title },
+					text: { title },
 					url: shareURL,
 				});
 			} catch (error) {
 				console.error("Error sharing:", error);
 			}
 		} else {
-			setIsOpen(!isOpen); 
+			setIsOpen(!isOpen);
 			// Toggle the modal on desktop or unsupported devices
 		}
 	};
@@ -79,7 +79,7 @@ function SocialShare({ shareURL }) {
 						>
 							<FiLink /> {copyText}
 						</button>
-						<li className="border-t-2 " />
+						<li className="border-t border-gray" />
 						<li className="flex gap-4 items-center px-[20px] py-[12px] transition-all duration-300 ease-in-out hover:translate-x-2">
 							<WhatsappShareButton
 								url={shareURL}

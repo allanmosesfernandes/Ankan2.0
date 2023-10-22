@@ -9,7 +9,8 @@ import {
 	WhatsappShareButton,
 } from "react-share";
 
-function SocialShare({ shareURL, title }) {
+function SocialShare({ shareURL, name }) {
+	console.log(name);
 	const [isOpen, setIsOpen] = useState(false);
 	const modalRef = useRef(null);
 	useEffect(() => {
@@ -45,8 +46,8 @@ function SocialShare({ shareURL, title }) {
 		if (navigator.share && isMobile) {
 			try {
 				await navigator.share({
-					title: { title },
-					text: { title },
+					title: name,
+					text: name,
 					url: shareURL,
 				});
 			} catch (error) {

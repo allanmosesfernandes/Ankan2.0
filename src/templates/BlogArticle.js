@@ -19,6 +19,7 @@ function BlogArticle({ pageContext, data, location }) {
 	const featurtedImageURL = featuredImage.node.mediaItemUrl;
 	const { gatsbyImage } = featuredImage.node;
 	const articleURL = location.href;
+	console.log(title);
 	return (
 		<>
 			<div className="fullBleed relative text-white md:p-6 p-0 md:h-[500px] h-[400px] flex justify-center items-center md:mb-16 mb-8">
@@ -40,7 +41,7 @@ function BlogArticle({ pageContext, data, location }) {
 						</p>
 						<SocialShare
 							shareURL={articleURL}
-							title={title}
+							name={title}
 							featuredImage={featurtedImageURL}
 						/>
 					</div>

@@ -1,17 +1,17 @@
 /* eslint-disable react/jsx-filename-extension */
+import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import React from "react";
 import SEO from "../components/SEO";
 import SocialShare from "../components/SocialShare/SocialShare";
 
-function BlogArticle({ pageContext, data }) {
+function BlogArticle({ pageContext, data, location }) {
 	const { id } = pageContext;
 	const blogData = data.allWpPost.nodes;
 	const { title, content, featuredImage, date, excerpt } = blogData[0];
 	const featurtedImageURL = featuredImage.node.mediaItemUrl;
 	const { gatsbyImage } = featuredImage.node;
-	const articleURL = window.location.href;
+	const articleURL = location.href;
 	return (
 		<>
 			<div className="fullBleed bg-tertiary text-white md:p-6 p-0 md:h-[500px] h-[400px] flex justify-center items-center md:mb-16 mb-8">

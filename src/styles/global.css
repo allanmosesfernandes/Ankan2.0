@@ -386,3 +386,11 @@
   .custom-grid {
     grid-template-columns: 1fr 2fr 2fr;
   }
+
+  .search__input {
+	background: rgba(0, 0, 0, 0.185);
+
+  }
+  .search__input::placeholder{
+	color: #fff !important;
+  }

@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
-// import { BiLogoLinkedin, BiLogoGmail } from "react-icons/bi";
-// import { FaAnglesUp } from "react-icons/fa";
-// import { AiOutlineInstagram } from "react-icons/ai";
+import { BiLogoLinkedin, BiLogoGmail } from "react-icons/bi";
+import { FaAnglesUp } from "react-icons/fa";
+import { AiOutlineInstagram } from "react-icons/ai";
 import WhiteArrow from "../images/white-arrow.svg";
 import Top from "../images/top.svg";
+import AF from "../images/AMF.png";
 
 function Footer() {
 	const goToTopHandler = () => {
@@ -27,7 +28,7 @@ function Footer() {
 			>
 				<img src={Top} alt="Top" className="cursor-pointer " />
 			</div>
-			<p className="lg:text-9xl text-6xl">
+			<p className="lg:text-9xl text-6xl lg:mt-0 mt-16">
 				Say <span className="font-seasons text-primary">hello</span>
 			</p>
 			<img
@@ -44,7 +45,7 @@ function Footer() {
 					rel="noreferrer"
 					className="border-effect group transition duration-300 ease-in-out rounded-full bg-primary md:p-4 p-2 hover:bg-white"
 				>
-					{/* <BiLogoLinkedin className="text-4xl transition duration-300 ease-in-out  group-hover:text-primary" /> */}
+					<BiLogoLinkedin className="text-4xl transition duration-300 ease-in-out  group-hover:text-primary" />
 				</a>
 				{/* Instagram */}
 				<a
@@ -53,7 +54,7 @@ function Footer() {
 					rel="noreferrer"
 					className="border-effect group transition duration-300 ease-in-out rounded-full bg-primary md:p-4 p-2 hover:bg-white "
 				>
-					{/* <AiOutlineInstagram className="text-4xl transition duration-300 ease-in-out  group-hover:text-primary" /> */}
+					<AiOutlineInstagram className="text-4xl transition duration-300 ease-in-out  group-hover:text-primary" />
 				</a>
 
 				{/* Email */}
@@ -63,7 +64,7 @@ function Footer() {
 					rel="noreferrer"
 					className="group transition duration-300 ease-in-out rounded-full bg-primary md:p-4 p-2 hover:bg-white"
 				>
-					{/* <BiLogoGmail className="text-4xl transition duration-300 ease-in-out  group-hover:text-primary" /> */}
+					<BiLogoGmail className="text-4xl transition duration-300 ease-in-out  group-hover:text-primary" />
 				</a>
 			</div>
 			{/* Footer Links */}
@@ -80,10 +81,14 @@ function Footer() {
 			</div>
 			{/* T&C */}
 			<div className="flex flex-col items-center justify-center mt-6">
-				<p className="text-sm">
-					Created with ❤️ & ☕ by{" "}
-					<Link to="https://allanfernandes.dev/">???</Link>
-				</p>
+				<p className="text-sm">Created with ❤️ & ☕ by </p>
+				<Link to="https://allanfernandes.dev/">
+					<img
+						src={AF}
+						alt="allan fernandes logo"
+						className="w-4/12 mx-auto mt-8 animate-spin-slow"
+					/>
+				</Link>
 			</div>
 		</footer>
 	);

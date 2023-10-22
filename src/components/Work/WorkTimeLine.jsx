@@ -4,9 +4,8 @@ import {
 	VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-// import { IoSchoolOutline } from "react-icons/io5";
-// import { MdOutlineWorkOutline } from "react-icons/md";
-// import "./worktimeline.scss";
+import { IoSchoolOutline } from "react-icons/io5";
+import { MdOutlineWorkOutline } from "react-icons/md";
 // import SchoolIcon from "@mui/icons-material/School";
 // import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 

@@ -9,7 +9,7 @@ function PlayListTakeOver() {
 				<img
 					src={PlayList}
 					alt="PlayList"
-					className="md:w-[500px] w-[300px] border-4 border-b-primary pb-6"
+					className="md:w-[500px] w-[300px] border-b-4 border-b-primary pb-6"
 				/>
 				<p className="text-lg">
 					Not saying I’m a music connoisseur, but I have been involved with

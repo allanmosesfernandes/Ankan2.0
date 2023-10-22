@@ -1,5 +1,5 @@
-import { Link } from "gatsby";
 import React from "react";
+import { Link } from "gatsby";
 
 function Header() {
 	return (
@@ -15,7 +15,7 @@ function Header() {
 					<Link to="about" className="md:block hidden hover-3">
 						About
 					</Link>
-					<Link to="blog">
+					<Link to="/blog">
 						<button
 							className="tracking-wider rounded-none uppercase border w-[100px] border-black hover:bg-black hover:text-white p-2 text-black ease-in-out duration-200"
 							type="button"

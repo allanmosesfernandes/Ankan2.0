@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 function VisualMusings({ weeklyInspiration }) {
 	const images = weeklyInspiration.nodes;
 	return (
-		<div className="flex flex-col md:p-5 p-3 w-full bg-[#333333] gap-6">
+		<div className="flex flex-col md:p-12 p-3 w-full bg-[#333333] gap-6">
 			<h2 className="lg:text-6xl text-3xl font-medium lg:mt-14 mt-10 leading-8 text-white">
 				Visual <span className="text-primary font-seasons">musings</span>
 			</h2>

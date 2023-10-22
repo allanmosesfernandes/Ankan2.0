@@ -22,7 +22,6 @@ function IndexPage({ data }) {
 			<VisualMusings weeklyInspiration={weeklyInspiration} />
 			<Insights posts={posts} />
 			<PlayListTakeOver />
-			<Footer />
 		</>
 	);
 }

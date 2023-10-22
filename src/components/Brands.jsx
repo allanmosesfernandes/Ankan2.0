@@ -20,13 +20,20 @@ function Brands() {
 	];
 
 	return (
-		<div className="flex flex-col md:p-5 p-3 w-full">
-			<h2 className="lg:text-6xl text-3xl font-medium lg:my-14 my-10 leading-8">
-				Brands I've{" "}
-				<span className="text-primary font-seasons font-medium">worked</span>{" "}
-				with
-			</h2>
-			<Marquee gradient="false" speed="30" gradientWidth="0" className="mb-12">
+		<>
+			<div className="flex flex-col md:p-12 p-3 w-full">
+				<h2 className="lg:text-6xl text-3xl font-medium lg:my-14 my-10 leading-8">
+					Brands I've{" "}
+					<span className="text-primary font-seasons font-medium">worked</span>{" "}
+					with
+				</h2>
+			</div>
+			<Marquee
+				gradient="false"
+				speed="30"
+				gradientWidth="0"
+				className="mb-12 -mt-12"
+			>
 				{brands.map((brand) => (
 					<div key={brand.title} className="brand__box">
 						<img
@@ -48,7 +55,7 @@ function Brands() {
 					</div>
 				))}
 			</Marquee>
-		</div>
+		</>
 	);
 }
 

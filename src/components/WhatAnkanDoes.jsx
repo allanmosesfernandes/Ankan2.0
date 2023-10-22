@@ -7,7 +7,7 @@ import LearnMore from "./Buttons/LearnMore";
 
 function WhatAnkanDoes() {
 	return (
-		<div className="flex flex-col md:p-5 p-3 w-full">
+		<div className="flex flex-col md:p-12 p-3 w-full">
 			<h2 className="lg:text-6xl text-3xl uppercase font-medium lg:my-14 my-10  leading-8">
 				What I do
 			</h2>

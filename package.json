@@ -34,6 +34,7 @@
     "gatsby-transformer-json": "^5.12.0",
     "gatsby-transformer-sharp": "^5.12.0",
     "he": "^1.2.0",
+    "jsdom": "^22.1.0",
     "material-icons": "^1.13.12",
     "netlify-cli": "^16.4.0",
     "postcss": "^8.4.29",

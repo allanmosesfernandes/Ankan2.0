@@ -37,7 +37,7 @@ function InsightsCopy({ posts, category }) {
 					const category = categories.nodes[0].name;
 					const image = getImage(featuredImage.node.gatsbyImage);
 					return (
-						<Link to={`blog/${slug}`}>
+						<Link to={`/blog/${slug}`}>
 							<div key={id} className="flex flex-col gap-6 h-full">
 								<GatsbyImage
 									image={image}

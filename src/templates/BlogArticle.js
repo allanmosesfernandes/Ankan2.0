@@ -9,11 +9,6 @@ import SocialShare from "../components/SocialShare/SocialShare";
 import InsightsCopy from "../components/InsightsCopy";
 
 function BlogArticle({ pageContext, data, location }) {
-	function parseHTMLContent(html) {
-		console.log("object");
-		const doc = new DOMParser().parseFromString(html, "text/html");
-		return he.decode(doc.body.textContent || "");
-	}
 	const { id, articleCategory } = pageContext;
 	const blogData = data.allWpPost.nodes;
 	const { posts } = data;
@@ -23,8 +18,27 @@ function BlogArticle({ pageContext, data, location }) {
 	const featurtedImageURL = featuredImage.node.mediaItemUrl;
 	const { gatsbyImage } = featuredImage.node;
 	const articleURL = location.href;
-	const cleanExcerpt = parseHTMLContent(excerpt);
-
+	/* HTML Parser */
+	function stripHtmlTags(str) {
+		return str.replace(/<[^>]*>/g, "");
+	}
+	function decodeHtmlEntities(str) {
+		return str
+			.replace(/&lt;/g, "<")
+			.replace(/&gt;/g, ">")
+			.replace(/&amp;/g, "&")
+			.replace(/&quot;/g, "\"")
+			.replace(/&#039;/g, "'")
+			.replace(/&apos;/g, "'")
+			.replace(/&hellip;/g, "…");
+		// Add any other entities you need to handle
+	}
+	function cleanText(excerpt) {
+		const noTags = stripHtmlTags(excerpt);
+		return decodeHtmlEntities(noTags);
+	}
+	const cleanExcerpt = cleanText(excerpt);
+	console.log(cleanExcerpt);
 	return (
 		<>
 			<div className="fullBleed relative text-white md:p-6 p-0 md:h-[500px] h-[400px] flex justify-center items-center md:mb-16 mb-8">
@@ -52,6 +66,7 @@ function BlogArticle({ pageContext, data, location }) {
 							shareURL={articleURL}
 							name={title}
 							featuredImage={featurtedImageURL}
+							description={cleanExcerpt}
 						/>
 					</div>
 					<div

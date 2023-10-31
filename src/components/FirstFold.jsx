@@ -7,7 +7,7 @@ function FirstFold() {
 		<div className="flex md:flex-row flex-col-reverse md:p-12 p-3 ">
 			{/* Left */}
 			<div className="md:w-7/12 w-full flex flex-col justify-center gap-8">
-				<p className="font-gothic lg:text-8xl text-4xl hidden md:block">
+				<p className="font-gothic lg:text-8xl sm:text-6xl text-4xl hidden md:block">
 					The <span className="text-primary">Common</span>
 					<br />
 					Thread

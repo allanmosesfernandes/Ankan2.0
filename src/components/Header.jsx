@@ -12,7 +12,7 @@ function Header() {
 				</Link>
 				{/* Links */}
 				<div className="ml-auto flex gap-8 uppercase items-center text-sm tracking-wider">
-					<Link to="about" className="md:block hidden hover-3">
+					<Link to="/about" className="md:block hidden hover-3">
 						About
 					</Link>
 					<Link to="/blog">

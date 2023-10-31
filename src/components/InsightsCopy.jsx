@@ -6,6 +6,9 @@ import Star from "../images/star.png";
 import LearnMore from "./Buttons/LearnMore";
 
 function InsightsCopy({ posts, category }) {
+	if (!posts || posts.length === 0) {
+		return null; // or return <></> for an empty fragment
+	}
 	return (
 		<div className="flex flex-col bg-black text-white items-center md:px-5 px-3 w-full lg:py-20 py-10">
 			<div className="flex flex-col md:gap-4 gap-2 lg:text-6xl text-3xl font-medium text-center">

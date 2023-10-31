@@ -72,10 +72,10 @@ function Footer() {
 				<Link to="/" className="hover-3">
 					Home
 				</Link>
-				<Link to="/" className="hover-3">
+				<Link to="/about" className="hover-3">
 					About
 				</Link>
-				<Link to="/" className="hover-3">
+				<Link to="/blog" className="hover-3">
 					Blog
 				</Link>
 			</div>

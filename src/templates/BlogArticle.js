@@ -3,23 +3,28 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { MdOutlineArrowBack } from "react-icons/md";
+import he from "he";
 import SEO from "../components/SEO";
 import SocialShare from "../components/SocialShare/SocialShare";
 import InsightsCopy from "../components/InsightsCopy";
 
 function BlogArticle({ pageContext, data, location }) {
+	function parseHTMLContent(html) {
+		console.log("object");
+		const doc = new DOMParser().parseFromString(html, "text/html");
+		return he.decode(doc.body.textContent || "");
+	}
 	const { id, articleCategory } = pageContext;
 	const blogData = data.allWpPost.nodes;
 	const { posts } = data;
 	const postsArray = posts.edges;
-	console.log(postsArray);
-	console.log(posts.edges);
 	const { title, content, featuredImage, date, excerpt, categories } =
 		blogData[0];
 	const featurtedImageURL = featuredImage.node.mediaItemUrl;
 	const { gatsbyImage } = featuredImage.node;
 	const articleURL = location.href;
-	console.log(title);
+	const cleanExcerpt = parseHTMLContent(excerpt);
+
 	return (
 		<>
 			<div className="fullBleed relative text-white md:p-6 p-0 md:h-[500px] h-[400px] flex justify-center items-center md:mb-16 mb-8">
@@ -31,7 +36,11 @@ function BlogArticle({ pageContext, data, location }) {
 				</h2>
 			</div>
 			<div className="max-w-screen-lg mx-auto">
-				<SEO title={title} description={excerpt} imageURL={featurtedImageURL} />
+				<SEO
+					title={title}
+					description={cleanExcerpt}
+					imageURL={featurtedImageURL}
+				/>
 				<div className="flex flex-col items-center w-full md:px-5 px-3">
 					<div className="flex justify-between w-full items-center border-t border-b border-black mb-8">
 						<p className="flex items-center mr-auto my-4 font-medium">

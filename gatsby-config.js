@@ -3,10 +3,12 @@
  */
 module.exports = {
 	siteMetadata: {
-		title: "Ankan Chittalipi - Fashion Merchandiser and Buyer",
+		title: "The Common Thread by Ankan Chittalipi",
 		siteUrl: "https://ankanchittalipi.com/",
 		description:
 			"Keep yourself updated on the Whats, Where & Whys in Fashion, Culture & Lifestyle with Ankan Chittalipi, a Fashion Merchandiser and Buyer.",
+		image:
+			"http://blog.ankanchittalipi.com/wp-content/uploads/2023/05/blue-bg-compressed.png",
 	},
 	plugins: [
 		{
@@ -30,7 +32,7 @@ module.exports = {
 		{
 			resolve: "gatsby-plugin-manifest",
 			options: {
-				icon: "src/images/icon.png",
+				icon: "src/favicon.ico",
 			},
 		},
 		{

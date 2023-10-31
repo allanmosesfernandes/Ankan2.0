@@ -10,7 +10,6 @@ import {
 } from "react-share";
 
 function SocialShare({ shareURL, name }) {
-	console.log(name);
 	const [isOpen, setIsOpen] = useState(false);
 	const modalRef = useRef(null);
 	useEffect(() => {

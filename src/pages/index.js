@@ -1,14 +1,13 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from "react";
 import { graphql } from "gatsby";
-import Header from "../components/Header";
 import FirstFold from "../components/FirstFold";
 import WhatAnkanDoes from "../components/WhatAnkanDoes";
 import Brands from "../components/Brands";
 import VisualMusings from "../components/VisualMusings";
 import Insights from "../components/Insights";
 import PlayListTakeOver from "../components/PlaylistTakeOver";
-import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 
 function IndexPage({ data }) {
 	// Destructure data
@@ -16,6 +15,7 @@ function IndexPage({ data }) {
 
 	return (
 		<>
+			<SEO />
 			<FirstFold />
 			<WhatAnkanDoes />
 			<Brands />

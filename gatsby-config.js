@@ -3,7 +3,7 @@
  */
 module.exports = {
 	siteMetadata: {
-		title: "The Common Thread by Ankan Chittalipi",
+		title: "The Common Thread — Ankan Chittalipi",
 		siteUrl: "https://ankanchittalipi.com/",
 		description:
 			"Keep yourself updated on the Whats, Where & Whys in Fashion, Culture & Lifestyle with Ankan Chittalipi, a Fashion Merchandiser and Buyer.",

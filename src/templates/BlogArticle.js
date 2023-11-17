@@ -3,6 +3,7 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { MdOutlineArrowBack } from "react-icons/md";
+import FadeIn from "react-fade-in";
 import he from "he";
 import SEO from "../components/SEO";
 import SocialShare from "../components/SocialShare/SocialShare";
@@ -68,10 +69,12 @@ function BlogArticle({ pageContext, data, location }) {
 							description={cleanExcerpt}
 						/>
 					</div>
-					<div
-						dangerouslySetInnerHTML={{ __html: content }}
-						className="wp-content-img leading-9 flex flex-col gap-2 mb-[5rem]"
-					/>
+					<FadeIn delay={1000}>
+						<div
+							dangerouslySetInnerHTML={{ __html: content }}
+							className="wp-content-img leading-9 flex flex-col gap-2 mb-[5rem]"
+						/>
+					</FadeIn>
 				</div>
 			</div>
 			<InsightsCopy posts={postsArray} category={articleCategory} />

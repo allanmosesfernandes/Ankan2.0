@@ -38,7 +38,6 @@ function BlogArticle({ pageContext, data, location }) {
 		return decodeHtmlEntities(noTags);
 	}
 	const cleanExcerpt = cleanText(excerpt);
-	console.log(cleanExcerpt);
 	return (
 		<>
 			<div className="fullBleed relative text-white md:p-6 p-0 md:h-[500px] h-[400px] flex justify-center items-center md:mb-16 mb-8">

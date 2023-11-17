@@ -13,7 +13,7 @@ const useSiteMetadata = () => {
 			}
 		}
 	`);
-
+	console.log(data.site.siteMetadata);
 	return data.site.siteMetadata;
 };
 

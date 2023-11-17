@@ -8,7 +8,7 @@ module.exports = {
 		description:
 			"Keep yourself updated on the Whats, Where & Whys in Fashion, Culture & Lifestyle with Ankan Chittalipi, a Fashion Merchandiser and Buyer.",
 		image:
-			"http://blog.ankanchittalipi.com/wp-content/uploads/2023/05/blue-bg-compressed.png",
+			"https://blog.ankanchittalipi.com/wp-content/uploads/2023/05/blue-bg-compressed.png",
 	},
 	plugins: [
 		{

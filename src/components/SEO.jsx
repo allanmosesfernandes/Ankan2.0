@@ -16,14 +16,13 @@ function SEO({ title, description, pathname, children, imageURL }) {
 		image: image || imageURL,
 		url: `${siteUrl}${pathname || ""}`,
 	};
-
 	return (
 		<Helmet>
 			<html lang="en" />
 			<title>{seo.title}</title>
 			<meta name="description" content={seo.description} />
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
-			<meta name="image" content={seo.image} />
+			<meta name="og:image" content={seo.image} />
 			<meta name="theme-color" content="#ff5757" />
 			<meta property="og:title" content={title} key="ogtitle" />
 			<meta

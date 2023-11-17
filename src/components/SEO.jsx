@@ -10,9 +10,14 @@ function SEO({ title, description, pathname, children, imageURL }) {
 		siteUrl,
 	} = useSiteMetadata();
 
+	// Replace encoded typographic apostrophes with regular apostrophes
+	const formattedDescription = description
+		? description.replace(/&#8217;/g, "'")
+		: defaultDescription;
+
 	const seo = {
 		title: title || defaultTitle,
-		description: description || defaultDescription,
+		description: formattedDescription,
 		image: imageURL || defaultImage,
 		url: `${siteUrl}${pathname || ""}`,
 	};
